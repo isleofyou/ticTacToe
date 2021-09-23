@@ -6,17 +6,25 @@ html {
   width: 100%;
 }
 
+.current-player-image {
+  width: 8%;
+  height: auto;
+}
+
 .turn-indicator {
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  background: -webkit-linear-gradient(#1E90FF,#490979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main-body-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
   height: 100%;
-  width: 100%;
+  width: 60%;
 }
 
 .side-image {
@@ -24,9 +32,16 @@ html {
   width: 25%;
 }
 
-section {
-  height: 10%;
-  border: 1px solid black;
+.wins-indicator {
+
+}
+
+.right-border {
+  border-right: 12px solid #1E90FF;
+}
+
+.top-border {
+  border-top: 12px solid #490979;
 }
 
 aside {
@@ -52,17 +67,16 @@ h1 {
 }
 
 .grid {
-  width: 600px;
-  height: fit-content;
   margin: 0;
-  display:flex;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  display: inline-grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 180px 180px 180px;
+  grid-gap: 0px
 }
 
 main > section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40%;
 }
