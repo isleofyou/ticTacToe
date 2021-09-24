@@ -8,60 +8,42 @@
 
 <body>
   <aside>
-    <img src="assets/circle.svg" alt="circle"  class="side-image">
-    <h1 class="wins-indicator">0 wins</h1>
+    <img src="assets/circle.svg" alt="circle" class="side-image">
+    <h1 class="wins-indicator" id="player-one">0 wins</h1>
   </aside>
   <div class="main-body-container">
     <div class="turn-indicator">
-      <img src="assets/circle.svg" alt="circle"  class="current-player-image">
-      <h1 class="wins-indicator">'s turn.</h1>
+      <img src="assets/circle.svg" alt="circle" id="player-turn-image" class="current-player-image">
+      <h1 class="turn-indicator">'s turn.</h1>
     </div>
-    <main class="grid">
-      <section class="top-left right-border">
-        <p>top left</p>
+    <main class="grid" id="game-grid">
+      <section class="top-left right-border game-box" id="box-one">
       </section>
-      <section class="top-middle right-border">
-        <p>top middle</p>
+      <section class="top-middle right-border game-box" id="box-two">
       </section>
-      <section class="top-right left-border">
-        <p>top right</p>
+      <section class="top-right left-border game-box" id="box-three">
       </section>
-      <section class="left-center right-border top-border">
-        <p>left center</p>
+      <section class="left-center right-border top-border game-box" id="box-four">
       </section>
-      <section class="center right-border top-border">
-        <p>center</p>
+      <section class="center right-border top-border game-box" id="box-five">
       </section>
-      <section class="right-center top-border">
-        <p>right center</p>
+      <section class="right-center top-border game-box" id="box-six">
       </section>
-      <section class="bottom-left right-border top-border">
-        <p>bottom left</p>
+      <section class="bottom-left right-border top-border game-box" id="box-seven">
       </section>
-      <section class="bottom-center right-border top-border">
-        <p>bottom center</p>
+      <section class="bottom-center right-border top-border game-box" id="box-eight">
       </section>
-      <section class="bottom-right top-border">
-        <p>bottom right</p>
+      <section class="bottom-right top-border game-box" id="box-nine">
       </section>
     </main>
   </div>
   <aside>
-    <img src="assets/x.svg" alt ="x" class="side-image">
-    <h1>0 wins</h1>
+    <img src="assets/x.svg" alt="x" class="side-image">
+    <h1 class="wins-indicator" id="player-two">0 wins</h1>
   </aside>
-  <script src="player.js"></script>
-  <script src="game.js"></script>
   <script src="main.js"></script>
+  <script src="Player.js"></script>
+  <script src="Game.js"></script>
 </body>
-
-
-
-
-
-
-
-
-
 
 </html>
