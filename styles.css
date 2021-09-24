@@ -7,11 +7,12 @@ html {
 }
 
 .current-player-image {
-  width: 8%;
+  width: 21%;
   height: auto;
 }
 
 .turn-indicator {
+  font-size: 110px;
   display: flex;
   justify-content: center;
   background: -webkit-linear-gradient(#1E90FF,#490979);
@@ -33,7 +34,7 @@ html {
 }
 
 .wins-indicator {
-
+  font-size: 50px;
 }
 
 .right-border {
@@ -79,4 +80,8 @@ main > section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+p {
+  font-size: 200px;
 }
