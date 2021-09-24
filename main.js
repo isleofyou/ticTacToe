@@ -1,6 +1,6 @@
 var playerOneWins = document.querySelector("#player-one")
 var playerTwoWins = document.querySelector("#player-two")
-var playerTurnIndicator = document.querySelector("#player-turn-image")
+var playerTurnIndicator = document.querySelector("#player-turn-indicator")
 var boxOne = document.querySelector("#box-one")
 var boxTwo = document.querySelector("#box-two")
 var boxThree = document.querySelector("#box-three")
@@ -13,13 +13,19 @@ var boxNine = document.querySelector("#box-nine")
 var gameGrid = document.querySelector("#game-grid")
 
 window.addEventListener("load", loadPage);
-gameGrid.addEventListener("click", addMove);
+gameGrid.addEventListener("click", rotatePlayers);
+
+function rotatePlayers() {
+  addMove();
+  changeTurnIndicator();
+}
 
 function loadPage() {
   newGame = new Game();
   newGame.addPlayers("Player 1");
   newGame.addPlayers("Player 2");
   newGame.determineFirstPlayer();
+  changeTurnIndicator();
 }
 
 function addMove() {
@@ -39,5 +45,19 @@ function addMove() {
       newGame.players[1].isTurn= false;
       newGame.players[0].isTurn = true;
     }
+  }
+}
+
+function changeTurnIndicator() {
+  if (newGame.players[0].isTurn === true) {
+    playerTurnIndicator.innerHTML = `
+    <img src="assets/circle.svg" alt="circle" id="player-turn-image" class="current-player-image">
+    <h1 class="turn-indicator">'s turn.</h1>
+    `
+  } else if (newGame.players[1].isTurn === true) {
+    playerTurnIndicator.innerHTML = `
+    <img src="assets/x.svg" alt="x" id="player-turn-image" class="current-player-image">
+    <h1 class="turn-indicator">'s turn.</h1>
+    `
   }
 }
