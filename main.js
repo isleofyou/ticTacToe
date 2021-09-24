@@ -15,10 +15,6 @@ var gameGrid = document.querySelector("#game-grid")
 window.addEventListener("load", loadPage);
 gameGrid.addEventListener("click", rotatePlayers);
 
-function rotatePlayers() {
-  addMove();
-  changeTurnIndicator();
-}
 
 function loadPage() {
   newGame = new Game();
@@ -28,21 +24,27 @@ function loadPage() {
   changeTurnIndicator();
 }
 
+function rotatePlayers() {
+  addMove();
+  newGame.checkForWin();
+  changeTurnIndicator();
+}
+
 function addMove() {
-  console.log(newGame.players[0].isTurn)
   if (event.target.classList.contains("game-box")) {
     if (newGame.players[0].isTurn === true) {
       event.target.innerHTML = `
     <img src="assets/circle.svg" alt="circle" class="game-circle">
     `;
+      event.target.classList += " circle";
       newGame.players[0].isTurn = false;
       newGame.players[1].isTurn = true;
-    }
-    else if (newGame.players[1].isTurn === true) {
+    } else if (newGame.players[1].isTurn === true) {
       event.target.innerHTML = `
       <img src="assets/x.svg" alt ="x" class="game-x">
       `;
-      newGame.players[1].isTurn= false;
+      event.target.classList += " x-move";
+      newGame.players[1].isTurn = false;
       newGame.players[0].isTurn = true;
     }
   }
