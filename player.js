@@ -1,17 +1,16 @@
 class Player {
-    constructor(name) {
-      this.name = name;
-      this.wins = 0;
-      this.isTurn = false;
-    }
-    saveWinToStorage(player) {
-      var storagePlayer = JSON.stringify(player);
-      localStorage.setItem("thisGame", storagePlayer);
-    }
-    retrieveWinsFromStorage() {
-    var retrievedGame = localStorage.getItem("thisGame");
-    var parsedGame = JSON.parse(retrievedGame);
-    newGame.players[0] += retrievedGame.players[0].wins;
-    newGame.players[1] += retrievedGame.players[1].wins;
-    }
+  constructor(name) {
+    this.name = name;
+    this.wins = 0;
+    this.isTurn = false;
+  }
+  saveWinToStorage(winner, wins) {
+    var storagePlayer = JSON.stringify(wins);
+    localStorage.setItem(winner, storagePlayer);
+  }
+  retrieveWinsFromStorage(key, player) {
+    var retrievedScore = localStorage.getItem(key);
+    var parsedScore = JSON.parse(retrievedScore);
+    player.wins += parsedScore;
+  }
 }

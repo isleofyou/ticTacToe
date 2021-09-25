@@ -18,18 +18,22 @@ gameGrid.addEventListener("click", rotatePlayers);
 
 function loadPage() {
   newGame = new Game();
-  var playerOne = newGame.addPlayers("Player 1");
-  var playerTwo = newGame.addPlayers("Player 2");
+  playerOne = newGame.addPlayers("Player 1");
+  playerTwo = newGame.addPlayers("Player 2");
   newGame.determineFirstPlayer();
   changeTurnIndicator();
+  newGame.players[0].retrieveWinsFromStorage(newGame.players[0].name, newGame.players[0]);
+  newGame.players[1].retrieveWinsFromStorage(newGame.players[1].name, newGame.players[1]);
+  updateWins();
+
 }
 
 function rotatePlayers() {
   addMove();
   newGame.checkForWin();
   changeTurnIndicator();
-
-
+  newGame.checkForDraw();
+  updateWins();
 }
 
 function addMove() {
@@ -38,7 +42,7 @@ function addMove() {
       event.target.innerHTML = `
     <img src="assets/circle.svg" alt="circle" class="game-circle">
     `;
-      event.target.classList += " circle";
+      event.target.classList += " circle marked";
       event.target.classList.remove("game-box");
       newGame.players[0].isTurn = false;
       newGame.players[1].isTurn = true;
@@ -46,7 +50,7 @@ function addMove() {
       event.target.innerHTML = `
       <img src="assets/x.svg" alt ="x" class="game-x">
       `;
-      event.target.classList += " x-move";
+      event.target.classList += " x-move marked";
       event.target.classList.remove("game-box");
       newGame.players[1].isTurn = false;
       newGame.players[0].isTurn = true;
@@ -66,4 +70,13 @@ function changeTurnIndicator() {
     <h1 class="turn-indicator">'s turn.</h1>
     `
   }
+}
+
+function updateWins() {
+  playerOneWins.innerText = `
+  ${newGame.players[0].wins} wins
+  `;
+  playerTwoWins.innerText = `
+  ${newGame.players[1].wins} wins
+  `;
 }
