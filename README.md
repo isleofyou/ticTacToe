@@ -2,6 +2,10 @@
 
 This program allows the user to play tic-tac-toe alone or with a friend. The program rotates between players, updates the current player's message, and will automatically add to a player's score and refresh upon a victory. The program will also know if the game is a draw, will display the "draw" message, and refresh after a delay. 
 
+![Game Example](https://user-images.githubusercontent.com/60856601/134785580-e0ea41d2-d24a-4ebd-aab1-db2084fe063c.png)
+
+![Draw Example](https://user-images.githubusercontent.com/60856601/134785596-679995ba-dc25-41c0-9679-96f24e503bb2.png)
+
 # Goals
 
 The goal of this project was to utilize and implicate all of the knowledge we have gained in class and implement this towards a final, working product. An emphasis existed with the usage of local storage; storing information, retrieving this information on page load, and reincorporate the information to the page after making it accessable again. 
@@ -12,7 +16,7 @@ The goal of this project was to utilize and implicate all of the knowledge we ha
 - CSS
 - HTML
 
-#Challenges
+# Challenges
 
 A large challenge I faced with this project was figuring out where to start after the HTML and CSS were completed. I have played Tic Tac Toe since childhood but to actually have a program understand the logic and intricacies if it was difficult. The initial approach was to pseudocode what my intentions were for the program. This helped break down the program into functions that were familiar and managable. 
 
