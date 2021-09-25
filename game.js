@@ -1,16 +1,6 @@
 class Game {
   constructor() {
     this.players = [];
-    this.winCombos = [
-      ["top-left", "top-middle", "top-right"],
-      ["left-center", "center", "right-center"],
-      ["bottom-left", "bottom-center", "bottom-right"],
-      ["top-left", "left-center", "bottom-left"],
-      ["top-center", "center", "bottom-center"],
-      ["top-right", "right-center", "bottom-right"],
-      ["top-left", "center", "bottom-right"],
-      ["top-right", "center", "bottom-left"]
-    ];
   }
   addPlayers(player) {
     var newPlayer = new Player(player);
@@ -53,5 +43,16 @@ class Game {
   }
   resetBoard() {
     location.reload();
+  }
+  saveWinToStorage(){
+    // var storagePlayer = JSON.stringify(newGame);
+    // localStorage.setItem("players", storagePlayer);
+  }
+  retrieveWinsFromStorage() {
+  // var retrievedGame = localStorage.getItem("players");
+  // var parsedGame = JSON.parse(retrievedGame);
+  // console.log(parsedGame)
+  // newGame.players[0] += parsedGame.players[0].wins;
+  // newGame.players[1] += parsedGame.players[1].wins;
   }
 }
