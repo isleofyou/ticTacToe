@@ -69,7 +69,6 @@ h1 {
 
 .grid {
   margin: 0;
-
   display: inline-grid;
   grid-template-columns: 200px 200px 200px;
   grid-template-rows: 180px 180px 180px;
