@@ -28,6 +28,8 @@ function rotatePlayers() {
   addMove();
   newGame.checkForWin();
   changeTurnIndicator();
+
+
 }
 
 function addMove() {
