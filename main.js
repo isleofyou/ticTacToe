@@ -18,8 +18,8 @@ gameGrid.addEventListener("click", rotatePlayers);
 
 function loadPage() {
   newGame = new Game();
-  newGame.addPlayers("Player 1");
-  newGame.addPlayers("Player 2");
+  var playerOne = newGame.addPlayers("Player 1");
+  var playerTwo = newGame.addPlayers("Player 2");
   newGame.determineFirstPlayer();
   changeTurnIndicator();
 }
@@ -37,6 +37,7 @@ function addMove() {
     <img src="assets/circle.svg" alt="circle" class="game-circle">
     `;
       event.target.classList += " circle";
+      event.target.classList.remove("game-box");
       newGame.players[0].isTurn = false;
       newGame.players[1].isTurn = true;
     } else if (newGame.players[1].isTurn === true) {
@@ -44,6 +45,7 @@ function addMove() {
       <img src="assets/x.svg" alt ="x" class="game-x">
       `;
       event.target.classList += " x-move";
+      event.target.classList.remove("game-box");
       newGame.players[1].isTurn = false;
       newGame.players[0].isTurn = true;
     }
