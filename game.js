@@ -26,33 +26,36 @@ class Game {
         return element.classList.contains('circle')
       });
       if (circleWin === true) {
-        console.log("Circle wins");
+        this.players[0].wins += 1;
+        this.players[0].saveWinToStorage(this.players[0].name, this.players[0].wins);
         this.resetBoard();
+
       }
       var xWin = winCombos[i].every(function(element) {
         return element.classList.contains('x-move')
       });
       if (xWin === true) {
-        console.log("X wins");
+        this.players[1].wins += 1;
+        this.players[1].saveWinToStorage(this.players[1].name, this.players[1].wins);
         this.resetBoard();
       }
     }
   }
   checkForDraw() {
-
+    var allBoxes = [boxOne, boxTwo, boxThree, boxFour, boxFive, boxSix, boxSeven, boxEight, boxNine];
+    var draw = true;
+    for (var i = 0; i < allBoxes.length; i++) {
+      if (!allBoxes[i].classList.contains('marked')) {
+        draw = false;
+        return;
+      }
+    }
+      playerTurnIndicator.innerText = "Draw!";
+      setTimeout(function() {
+        newGame.resetBoard()
+      }, 2500);
   }
   resetBoard() {
     location.reload();
-  }
-  saveWinToStorage(){
-    // var storagePlayer = JSON.stringify(newGame);
-    // localStorage.setItem("players", storagePlayer);
-  }
-  retrieveWinsFromStorage() {
-  // var retrievedGame = localStorage.getItem("players");
-  // var parsedGame = JSON.parse(retrievedGame);
-  // console.log(parsedGame)
-  // newGame.players[0] += parsedGame.players[0].wins;
-  // newGame.players[1] += parsedGame.players[1].wins;
   }
 }
