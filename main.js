@@ -25,7 +25,6 @@ function loadPage() {
   newGame.players[0].retrieveWinsFromStorage(newGame.players[0].name, newGame.players[0]);
   newGame.players[1].retrieveWinsFromStorage(newGame.players[1].name, newGame.players[1]);
   updateWins();
-
 }
 
 function rotatePlayers() {
@@ -40,8 +39,8 @@ function addMove() {
   if (event.target.classList.contains("game-box")) {
     if (newGame.players[0].isTurn === true) {
       event.target.innerHTML = `
-    <img src="assets/circle.svg" alt="circle" class="game-circle">
-    `;
+      <img src="assets/circle.svg" alt="circle" class="game-circle">
+      `;
       event.target.classList += " circle marked";
       event.target.classList.remove("game-box");
       newGame.players[0].isTurn = false;

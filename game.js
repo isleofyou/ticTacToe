@@ -29,7 +29,6 @@ class Game {
         this.players[0].wins += 1;
         this.players[0].saveWinToStorage(this.players[0].name, this.players[0].wins);
         this.resetBoard();
-
       }
       var xWin = winCombos[i].every(function(element) {
         return element.classList.contains('x-move')
@@ -50,10 +49,10 @@ class Game {
         return;
       }
     }
-      playerTurnIndicator.innerText = "Draw!";
-      setTimeout(function() {
-        newGame.resetBoard()
-      }, 2500);
+    playerTurnIndicator.innerText = "Draw!";
+    setTimeout(function() {
+      newGame.resetBoard()
+    }, 2500);
   }
   resetBoard() {
     location.reload();
