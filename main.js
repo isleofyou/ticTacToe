@@ -15,7 +15,6 @@ var gameGrid = document.querySelector("#game-grid")
 window.addEventListener("load", loadPage);
 gameGrid.addEventListener("click", rotatePlayers);
 
-
 function loadPage() {
   newGame = new Game();
   playerOne = newGame.addPlayers("Player 1");
