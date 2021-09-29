@@ -22,7 +22,7 @@ A large challenge I faced with this project was figuring out where to start afte
 
 # Wins
 
-My largest win on this project was the rate at which things were completed. I completed the entire functionality of the program by Saturday afternoon. I give a lot of credit for this to not getting stuck on the CSS portion. There were moments where I would get stuck on the logic of a function, take a break, and then come back to steamroll through the issue refreshed and recharged. Burnout was a major problem on my last projects, and this time I was more conscious of setting timers.
+My largest win on this project was the rate at which things were completed. I completed the entire functionality of the program by Saturday afternoon. I give a lot of credit for this to not getting stuck on the CSS portion. There were moments where I would get stuck on the logic of a function, take a break, and then come back to steamroll through the issue refreshed and recharged. Burnout was a major problem on my last projects, and this time I was more conscious of taking breaks.
 
 # Reflection
 
