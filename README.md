@@ -28,4 +28,6 @@ My largest win on this project was the rate at which things were completed. I co
 
 This project allowed me to gain confidence going into the next module. Though I was anxious starting the project without any real guidance (the rubric did not provide iterations to work through) I overcame this by breaking down all needed functionality and completing them in an order that made sense. This project reinforced the importance of pseudocoding and rubber ducking. 
 
+# Project Spec and Deploy link
 
+Deploy link [here](https://isleofyou.github.io/ticTacToe/)
