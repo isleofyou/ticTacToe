@@ -31,3 +31,4 @@ This project allowed me to gain confidence going into the next module. Though I 
 # Project Spec and Deploy link
 
 Deploy link [here](https://isleofyou.github.io/ticTacToe/)
+Project spec [here](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo.html)
